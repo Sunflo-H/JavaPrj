@@ -1,0 +1,45 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Chapter4Ex9 {
+
+	public static void main(String[] args) throws IOException {
+
+		FileInputStream fis = new FileInputStream("res\\img1.cmp");
+		FileOutputStream fos = new FileOutputStream("res\\img1-reverse.cmp");
+		Scanner scan = new Scanner(fis, "UTF-8");
+
+		// img1.cmp의 문자를 좌우 바꾸기
+		// 캐릭터 버퍼 [0]<->[18] 바꾸고 바꾸다보면 좌우 바뀐다
+		// 로드
+
+		String line = scan.nextLine();
+
+		char[] gun = line.toCharArray();
+		char[] gun_re = new char[gun.length];
+		System.out.println(Arrays.toString(gun));
+
+		scan.close();
+		fos.close();
+		fis.close();
+		// 바꾸기                                  19
+		for (int i = 0; i < gun.length; i++) {
+			for (int j = 0; j < gun.length/2; j++) {
+				char temp = gun[j];
+				gun[j] = gun[gun.length - 1 - j];
+				gun[gun.length - 1 - j] = temp;
+			}
+		}
+		char temp =gun[0];
+		gun[0]=gun[18];
+		gun[18]=gun[0];
+		
+		System.out.println(Arrays.toString(gun));
+		// 저장
+
+	}
+}

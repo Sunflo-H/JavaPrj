@@ -1,0 +1,21 @@
+package Practics;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class FileIO {
+
+	public static void main(String[] args) throws IOException {
+
+		FileInputStream fis = new FileInputStream("res\\datap.txt");
+		Scanner scan = new Scanner(fis); //
+
+		while(scan.hasNextLine()) {
+			scan.nextLine();
+		}
+		
+	}
+
+}

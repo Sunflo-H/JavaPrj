@@ -18,18 +18,19 @@ public class Chapter4Ex9 {
 		FileInputStream fis = new FileInputStream("res\\img1.cmp");
 		Scanner scan = new Scanner(fis, "UTF-8");
 
-		// img1.cmpÀÇ ¹®ÀÚ¸¦ ÁÂ¿ì ¹Ù²Ù±â
-		// Ä³¸¯ÅÍ ¹öÆÛ [0]<->[18] ¹Ù²Ù°í ¹Ù²Ù´Ùº¸¸é ÁÂ¿ì ¹Ù²ï´Ù
+		// img1.cmp
+		// Ä³ [0]<->[18]
 
-		// ·Îµå
 
+		//ìž…ë ¥
 		String line = scan.nextLine();
 		System.out.println(line);
 		char[] arr = line.toCharArray();
 		System.out.println(Arrays.toString(arr));
 
-		// ¹Ù²Ù±â////////////////arr.length=19
+		// ////////////////arr.length=19
 
+		//ì—­ì •ë ¬
 		for (int j = 0; j < arr.length / 2; j++) {
 			char temp = arr[j];
 			arr[j] = arr[(arr.length - 1) - j];
@@ -38,7 +39,7 @@ public class Chapter4Ex9 {
 
 		System.out.println(Arrays.toString(arr));
 
-		// ÀúÀå
+		//ì¶œë ¥
 		FileOutputStream fos = new FileOutputStream("res\\img1-reverse.cmp");
 		OutputStreamWriter osw = new OutputStreamWriter(fos,"UTF-8");
 		for (int i = 0; i < arr.length; i++) {

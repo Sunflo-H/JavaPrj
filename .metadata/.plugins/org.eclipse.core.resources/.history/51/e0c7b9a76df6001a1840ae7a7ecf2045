@@ -1,0 +1,57 @@
+package Practics;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class C4Ex7 {
+
+	public static void main(String[] args) throws IOException {
+
+		int clas = 3, stu = 9;
+		int kor[][] = new int[clas][stu];
+
+		/////////////////////// 데이터 입력
+		FileInputStream fis = new FileInputStream("res//data2.txt");
+		Scanner scan = new Scanner("fis");
+		{
+			int i = 0;
+			while (scan.hasNextInt()) {
+				String[] tokens = new String[stu];
+				tokens = scan.nextLine().split(",");
+
+				for (int j = 0; j < stu; j++) {
+					kor[i][j] = Integer.parseInt(tokens[j]);
+				}
+				i++;
+			}
+		}
+		scan.close();
+		fis.close();
+		//////////////////////// 데이터 계산
+		int[] sums = new int[clas];
+		double[] avgs = new double[clas];
+		int total = 0;
+		double total_avg = 0;
+		
+		//각 반의 합
+		for(int i=0;i<clas;i++) 
+			for(int j=0;j<stu;j++)
+				sums[i]+=kor[i][j]; //각 반의 합
+		
+		//각 반의 평균
+		for(int i=0;i<clas;i++)
+			avgs[i]=(double)sums[i]/stu;
+		
+		//총 점수
+		for(int i=0;i<clas;i++)
+			
+		//총 평균
+		
+
+		//////////////////////// 데이터 출력
+
+	}
+
+}

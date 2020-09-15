@@ -1,0 +1,79 @@
+package Practics;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class C4Ex8 {
+
+	public static void main(String[] args) throws IOException {
+
+//////////////////한반을 for하나만 써서 정렬해보기 (성공
+//{
+//int s = 0;
+//for (int j = 0; j < gs[1].length;) { // gs[1].length = 4
+//if (s == gs[1].length - 1)
+//s = 0;
+//if (gs[1][s] < gs[1][s + 1]) {// gs[0][0] <->gs[0][1]
+//tmp = gs[1][s];
+//gs[1][s] = gs[1][s + 1];
+//gs[1][s + 1] = tmp;
+//System.out.printf("j : %d, s : %d, gs[1][%d] : %d, gs[1][%d] : %d\n ", j, s, s, gs[1][s], s + 1,
+//		gs[1][s + 1]);
+//s++;
+//} else
+//s++;
+//if (s == gs[1].length - 1)
+//j++;
+//}
+//}
+//for (int i = 0; i < gs[1].length; i++) {
+//System.out.printf("%d ", gs[1][i]);
+//}
+
+/////////////////////////////// for문 한번만 중첩해서 정렬해보기 (성공
+//		FileInputStream fis = new FileInputStream("res\\data3.txt");
+//		Scanner scan = new Scanner(fis);
+//		
+//		int[] lengths = { 8, 5, 9 };
+//		int[][] gs = new int[3][];
+//		for (int i = 0; i < lengths.length; i++) {
+//			int cnt = lengths[i];
+//			gs[i] = new int[cnt];// gs[i][cnt] 라는거야 값을 넣은게 아니지 객체 생성이지
+//		}
+//		for (int j = 0; j < gs.length; j++) {
+//			String line = scan.nextLine();
+//			String[] kors = line.split(",");
+//			for (int i = 0; i < kors.length; i++) {
+//				gs[j][i] = Integer.parseInt(kors[i]);
+//			}
+//		}
+//
+//		scan.close();
+//		fis.close();
+//		for (int i = 0; i < gs.length; i++) {
+//			int sort_count = 0;
+//			int temp=0;
+//			for (int j = 0; j < gs[i].length;) { // gs[1].length = 4
+//				if (sort_count == gs[i].length - 1)
+//					sort_count = 0;
+//				if (gs[i][sort_count] < gs[i][sort_count + 1]) {// gs[0][0] <->gs[0][1]
+//					temp = gs[i][sort_count];
+//					gs[i][sort_count] = gs[i][sort_count + 1];
+//					gs[i][sort_count + 1] = temp;
+//				}
+//				sort_count++;
+//				if (sort_count == gs[i].length - 1)
+//					j++;
+//			}
+//		}
+//		for (int j = 0; j < gs.length; j++) {
+//			for (int i = 0; i < gs[j].length; i++) {
+//				System.out.printf("%d ", gs[j][i]);
+//			}
+//			System.out.println();
+//		}
+//	}
+
+	}
+}
