@@ -3,9 +3,11 @@ import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.util.Arrays;
@@ -42,10 +44,16 @@ public class Chapter4Ex9 {
 		//출력
 		FileOutputStream fos = new FileOutputStream("res\\img1-reverse.cmp");
 		OutputStreamWriter osw = new OutputStreamWriter(fos,"UTF-8");
+		PrintStream out = new PrintStream(fos, true, "UTF-8");
+		FileWriter fw = new FileWriter("res\\img1-reverse.cmp");
 		for (int i = 0; i < arr.length; i++) {
-			osw.write(arr[i]);
+			//osw.write(arr[i]);
+//			out.print(arr[i]);
+//			out.print(",");
+			fw.write(arr[i]);
 		}
-		osw.flush();
+		fw.flush();
+		//osw.flush();
 		//fos.close();
 	}
 }
