@@ -1,8 +1,8 @@
 package chapter5eEx2;
 
 public class Member {
-	int id;
-	String uid;
-	String name;
-	int age;
+	public int id;
+	public String uid;
+	public String name;
+	public int age;
 }
