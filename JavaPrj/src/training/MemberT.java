@@ -1,4 +1,4 @@
-package Practics;
+package training;
 
 import java.awt.List;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 import chapter5eEx2.Member;
 
-public class MemberP {
+public class MemberT {
 
 	public static void main(String[] args) throws IOException {
 
