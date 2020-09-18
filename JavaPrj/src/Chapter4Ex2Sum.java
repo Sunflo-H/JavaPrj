@@ -7,7 +7,7 @@ public class Chapter4Ex2Sum {
 
 	public static void main(String[] args) throws IOException {
 
-		FileInputStream fis = new FileInputStream("res/data.txt");
+		FileInputStream fis = new FileInputStream("res\\data.txt");
 		Scanner scan = new Scanner(fis);
 
 		// 배열의 크기 -> 파일의 헤더에 등록된 데이터 수를 가져온다.
@@ -66,7 +66,7 @@ public class Chapter4Ex2Sum {
 			System.out.printf("%d ", nums[i]);
 
 		// =========데이터 저장=============================
-		FileOutputStream fos = new FileOutputStream("res/result.txt");
+		FileOutputStream fos = new FileOutputStream("res\\result.txt");
 		fos.write(count);
 		fos.flush();
 		fos.close();
