@@ -43,31 +43,51 @@ public class C5E2program {
 		// 이름을 기준으로 내림차순 버블정렬
 		for (int i = 0; i < countOfMember - 1; i++) {
 			for (int j = 0; j < countOfMember - 1 - i; j++) {
-				//화면 클리어
+				boolean check =false;
+				//정렬 되기 전 출력
 				for (int a = 0; a < 50; a++) 
 					System.out.println();
-				//출력
-				for (int a = 0; a < countOfMember-1; a++) {
-					if (mList[a].age > mList[a+1].age) 
+				for (int a = 0; a < countOfMember; a++) {
+					if (a==j||a==(j+1)) 
 						System.out.printf("*");
-					System.out.printf("%d,%5s,%s,%3d\n", mList[a].id, mList[a].uid, mList[a].name, mList[a].age);
+					//i=0 X
+					//i=1 mList[5]
+					//i=2 mList[5] [4]
+					//i=3 mList[5] [4] [3]
+					if(i+a>5)
+						System.out.printf("[");
+					System.out.printf("%d,%5s,%s,%3d", mList[a].id, mList[a].uid, mList[a].name, mList[a].age);
+					if(i+a>5)
+						System.out.printf("]");
+					System.out.println();
 				}
 				Thread.sleep(1000);
+				
 				if (mList[j].age > mList[j+1].age) {
 					Member temp = mList[j];
 					mList[j] = mList[j + 1];
 					mList[j + 1] = temp;
-					
+					check = true;
 				}
+				//정렬 된 후 출력
+				for (int a = 0; a < 50; a++) 
+					System.out.println();
+				for (int a = 0; a < countOfMember; a++) {
+					if(i+a>5)
+						System.out.printf("[");
+					if (check&&a==j||check&&a==(j+1)) 
+						System.out.printf("[");
+					System.out.printf("%d,%5s,%s,%3d", mList[a].id, mList[a].uid, mList[a].name, mList[a].age);
+					if (check&&a==j||check&&a==(j+1)) 
+						System.out.printf("]");
+					if(i+a>5)
+						System.out.printf("]");
+					System.out.println();
+				}
+				Thread.sleep(1000);
+				
 			}
 		}
-
-		// 출력 -----
-//		for (int i = 0; i < countOfMember; i++) {
-//			Member m = new Member();
-//			m = mList[i];
-//			System.out.printf("%d,%s,%s,%d\n", m.id, m.uid, m.name, m.age);
-//		}
 		System.out.println("작업완료");
 	}
 }
