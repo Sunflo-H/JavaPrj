@@ -11,6 +11,10 @@ import chapter5eEx2.Member;
 public class C5E2program {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
+//		1. 정렬할때 뭐가 정렬되는지 표시하기
+//		2. 정렬되기 전에 표시하고 정렬후에는 표시 없이 출력
+//		3. 3에 이어서 정렬이 발생하면 출력시 정렬된거에 [] 표시
+//		4. 4에 이어서 결정된 값은 []영구표시
 
 		FileInputStream fis = new FileInputStream("res\\data5.txt");
 		Scanner scan = new Scanner(fis);

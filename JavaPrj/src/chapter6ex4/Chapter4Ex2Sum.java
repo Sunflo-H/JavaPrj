@@ -1,4 +1,4 @@
-package chapter6ex2;
+package chapter6ex4;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-public class Program {
+public class Chapter4Ex2Sum {
 
 	public static void main(String[] args) throws IOException {
 		// 데이터를 int[] nums 배열에 로드하는 코드를 작성하고
