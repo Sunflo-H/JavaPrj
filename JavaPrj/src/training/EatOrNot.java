@@ -1,4 +1,4 @@
-package miniProjects;
+package training;
 
 import java.io.IOException;
 import java.util.Random;
