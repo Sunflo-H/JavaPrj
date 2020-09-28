@@ -6,7 +6,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Work/Tools/Console.jar"/>
-	<classpathentry kind="lib" path="C:/Work/Tools/Lotto.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
